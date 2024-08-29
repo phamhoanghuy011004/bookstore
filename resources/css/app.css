@@ -1,0 +1,46 @@
+.add-to-cart-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.quantity-wrapper {
+    position: relative;
+}
+
+.quantity-input {
+    width: 60px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.add-to-cart-btn {
+    background-color: #ff6b6b;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.add-to-cart-btn i {
+    font-size: 18px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #ff4c4c;
+    transform: translateY(-3px);
+}
+
+.add-to-cart-btn:active {
+    transform: translateY(0);
+}
