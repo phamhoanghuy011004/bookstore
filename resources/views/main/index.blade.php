@@ -502,7 +502,7 @@
                                 data-bs-target="#registrationModal">Create
                             Account</button>
                         <div class="loginBg">
-                            <img src="assets/img/signUpbg.jpg" alt="signUpBg">
+                            <img src="https://res.cloudinary.com/dficfkyug/image/upload/v1725012622/ugccxilcumo3jroncyuj.jpg" alt="signUpBg">
                         </div>
                     </div>
                 </div>

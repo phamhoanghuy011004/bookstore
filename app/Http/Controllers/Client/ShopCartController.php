@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Client;
 use App\Models\Product;
+use App\Models\ShoppingCart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use stdClass;
@@ -151,6 +152,22 @@ class ShopCartController
         Session::put('shoppingCart', $shoppingCart);
         Session::flash('success', 'Xóa sản phẩm khỏi giỏ hàng thành công!');
         return redirect('/shop-cart');
+    }
+
+    public function save(Request $request)
+    {
+        $request->validate([
+            'total_price' => 'required|numeric',
+            'product_names' => 'required|string',
+        ]);
+
+        // Lưu thông tin vào database
+        $cart = new ShoppingCart();
+        $cart->total_price = $request->total_price;
+        $cart->product_names = $request->product_names;
+        $cart->save();
+
+        return redirect()->back()->with('success', 'Cart information saved successfully!');
     }
 }
 

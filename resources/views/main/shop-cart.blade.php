@@ -128,8 +128,8 @@
                                 <i class="fal fa-envelope"></i>
                             </div>
                             <div class="offcanvas__contact-text">
-                                <a href="mailto:info@example.com"><span
-                                        class="mailto:info@example.com">info@example.com</span></a>
+                                <a href="mailto:bookstoreaptech@example.com"><span
+                                        class="mailto:bookstoreaptech@example.com">bookstoreaptech@example.com</span></a>
                             </div>
                         </li>
                         <li class="d-flex align-items-center">
@@ -173,11 +173,11 @@
             <ul class="contact-list">
                 <li>
                     <i class="fa-regular fa-phone"></i>
-                    <a href="tel:+20866660112">+208-6666-0112</a>
+                    <a href="tel:+0986.999.888">+0986.999.888</a>
                 </li>
                 <li>
                     <i class="far fa-envelope"></i>
-                    <a href="mailto:info@example.com">info@example.com</a>
+                    <a href="mailto:bookstoreaptech@example.com">bookstoreaptech@example.com</a>
                 </li>
                 <li>
                     <i class="far fa-clock"></i>
@@ -667,6 +667,12 @@
                                 </tr>
                             @endforeach
                         </table>
+                        <form action="{{ route('shop-cart.save') }}" method="post" class="mt-3">
+                            @csrf
+                            <input type="hidden" name="total_price" value="{{$totalPrice}}">
+                            <input type="hidden" name="product_names" value="{{ implode(',', array_column($shoppingCart, 'name')) }}">
+                            <button type="submit" class="w3-button w3-green">Save</button>
+                        </form>
                     </div>
 
 
@@ -727,7 +733,7 @@
                 <div class="content">
                     <p>Call Us 7/24</p>
                     <h3>
-                        <a href="tel:+2085550112">+208-555-0112</a>
+                        <a href="tel:+0986.999.888">0986.999.888</a>
                     </h3>
                 </div>
             </div>

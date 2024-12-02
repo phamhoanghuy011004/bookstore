@@ -583,7 +583,7 @@
 <!-- Breadcumb Section Start -->
 <div class="breadcrumb-wrapper">
     <div class="book1">
-        <img src="assets/img/hero/book1.png" alt="book">
+        <img src="https://res.cloudinary.com/dficfkyug/image/upload/v1724836848/dfary5vjv5c7lcp3g9rf.png" alt="book">
     </div>
     <div class="book2">
         <img src="assets/img/hero/book2.png" alt="book">
@@ -652,44 +652,52 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="video-image">
-                            <img src="assets/img/contact.jpg" alt="img">
-                            <div class="video-box">
-                                <a href="https://www.youtube.com/watch?v=Cn4G2lZ_g2I"
-                                   class="video-btn ripple video-popup">
-                                    <i class="fa-solid fa-play"></i>
-                                </a>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <div class="col-lg-8">
                     <div class="contact-content">
                         <h2>Ready to Get Started?</h2>
-                        <p>
-                            Nunc tincidunt cursus lectus ac semper. Aenean ullamcorper quis arcu molestie consequat.
-                            Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut nec lobortis elit, eu
-                            ultrices justo. Fusce auctor erat est, non fringilla nibh tempus quis. Aenean dignissim
-                        </p>
-                        <form action="contact.php" id="contact-form" method="POST" class="contact-form-items">
+{{--                        <p>--}}
+{{--                            Nunc tincidunt cursus lectus ac semper. Aenean ullamcorper quis arcu molestie consequat.--}}
+{{--                            Interdum et malesuada fames ac ante ipsum primis in faucibus. Ut nec lobortis elit, eu--}}
+{{--                            ultrices justo. Fusce auctor erat est, non fringilla nibh tempus quis. Aenean dignissim--}}
+{{--                        </p>--}}
+                        <form action="{{ route('contact.store') }}" method="POST" class="contact-form-items">
+                            @csrf
+
+                            @if($errors->any())
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
+
+                            @if (session('success'))
+                                <div class="alert alert-success">
+                                    {{ session('success') }}
+                                </div>
+                            @endif
+
                             <div class="row g-4">
                                 <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
                                     <div class="form-clt">
                                         <span>Your name*</span>
-                                        <input type="text" name="name" id="name" placeholder="Your Name">
+                                        <input type="text" name="name" id="name" placeholder="Your Name" value="{{ old('name') }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 wow fadeInUp" data-wow-delay=".5s">
                                     <div class="form-clt">
                                         <span>Your Email*</span>
-                                        <input type="text" name="email" id="email123" placeholder="Your Email">
+                                        <input type="text" name="email" id="email123" placeholder="Your Email" value="{{ old('email') }}">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 wow fadeInUp" data-wow-delay=".7s">
                                     <div class="form-clt">
                                         <span>Write Message*</span>
-                                        <textarea name="message" id="message"
-                                                  placeholder="Write Message"></textarea>
+                                        <textarea name="message" id="message" placeholder="Write Message">{{ old('message') }}</textarea>
                                     </div>
                                 </div>
                                 <div class="col-lg-7 wow fadeInUp" data-wow-delay=".9s">

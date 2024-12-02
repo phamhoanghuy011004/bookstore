@@ -2,9 +2,10 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="/admin" class="brand-link">
-        <img src="/template/admin/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <img src="https://res.cloudinary.com/dficfkyug/image/upload/v1725011774/mhywnsigqufbx1gtmfnf.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .7; width: 80px; margin-left: -5px;">
         <span class="brand-text font-weight-light">AdminShop Books</span>
     </a>
+
 
     <!-- Sidebar -->
     <div class="sidebar">
@@ -33,111 +34,177 @@
         <!-- Sidebar Menu -->
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-                <!-- Add icons to the links using the .nav-icon class with font-awesome or any other icon font library -->
+                <!-- Dashboard -->
                 <li class="nav-item">
                     <a href="#" class="nav-link">
                         <i class="nav-icon fas fa-tachometer-alt"></i>
                         <p>
                             Dashboard
+                        </p>
+                    </a>
+                </li>
+
+                <!-- Category Section -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-folder"></i>
+                        <p>
+                            Categories
                             <i class="right fas fa-angle-left"></i>
                         </p>
                     </a>
                     <ul class="nav nav-treeview">
-                        <!-- Category Tree -->
                         <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-folder nav-icon"></i>
-                                <p>
-                                    Category
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <li class="nav-item">
-                                    <a href="/admin/menus/add" class="nav-link ml-3">
-                                        <i class="fas fa-folder nav-icon"></i>
-                                        <p>Add category</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="/admin/menus/list" class="nav-link ml-3">
-                                        <i class="fas fa-folder nav-icon"></i>
-                                        <p>List of categories</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="/admin/menus/search" class="nav-link ml-3">
-                                        <i class="fas fa-folder nav-icon"></i>
-                                        <p>Search category</p>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-
-
-                        <li class="nav-item">
-                            <a href="#" class="nav-link">
-                                <i class="far fa-folder nav-icon"></i>
-                                <p>
-                                    Product
-                                    <i class="right fas fa-angle-left"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                <!-- Products Section -->
-                                <li class="nav-item">
-                                    <a href="/admin/products/add" class="nav-link ml-3">
-                                        <i class="fas fa-folder nav-icon"></i>
-                                        <p>Add products</p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="/admin/products/list" class="nav-link ml-3">
-                                        <i class="fas fa-folder nav-icon"></i>
-                                        <p>List Of Products</p>
-                                    </a>
-                                </li>
-
-                            </ul>
-                        </li>
-
-
-
-                        <!-- Events Section -->
-                        <li class="nav-item">
-                            <a href="/admin/events/add" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Add event</p>
-                            </a>
-                        </li>
-
-                        <!-- Authors Section -->
-                        <li class="nav-item">
-                            <a href="/admin/authors/add" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Add author</p>
+                            <a href="/admin/menus/add" class="nav-link ml-3">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Add category</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/admin/authors/list" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>List Of Author</p>
+                            <a href="/admin/menus/list" class="nav-link ml-3">
+                                <i class="fas fa-list nav-icon"></i>
+                                <p>List of categories</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/admin/users/add" class="nav-link">
-                                <i class="far fa-circle nav-icon"></i>
-                                <p>Add user</p>
+                            <a href="/admin/menus/search" class="nav-link ml-3">
+                                <i class="fas fa-search nav-icon"></i>
+                                <p>Search category</p>
                             </a>
                         </li>
                     </ul>
                 </li>
+
+                <!-- Products Section -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-box"></i>
+                        <p>
+                            Products
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/admin/products/add" class="nav-link ml-3">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Add products</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/products/list" class="nav-link ml-3">
+                                <i class="fas fa-list nav-icon"></i>
+                                <p>List Of Products</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Events Section -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-calendar-alt"></i>
+                        <p>
+                            Events
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/admin/events/add" class="nav-link ml-3">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Add event</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/events/list" class="nav-link ml-3">
+                                <i class="fas fa-list nav-icon"></i>
+                                <p>List Of Event</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Authors Section -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-user"></i>
+                        <p>
+                            Authors
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/admin/authors/add" class="nav-link ml-3">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Add author</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/authors/list" class="nav-link ml-3">
+                                <i class="fas fa-list nav-icon"></i>
+                                <p>List Of Authors</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Users Section -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>
+                            Users
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/admin/users/add" class="nav-link ml-3">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Add user</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/users/list" class="nav-link ml-3">
+                                <i class="fas fa-list nav-icon"></i>
+                                <p>List Of Users</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Contacts Section -->
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="nav-icon fas fa-address-book"></i>
+                        <p>
+                            Message
+                            <i class="right fas fa-angle-left"></i>
+                        </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                        <li class="nav-item">
+                            <a href="/admin/contacts/add" class="nav-link ml-3">
+                                <i class="fas fa-plus nav-icon"></i>
+                                <p>Add</p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="/admin/contacts/list" class="nav-link ml-3">
+                                <i class="fas fa-list nav-icon"></i>
+                                <p>List of Contacts</p>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+
             </ul>
         </nav>
-
         <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
 </aside>
-
 <!-- Content Wrapper. Contains page content -->

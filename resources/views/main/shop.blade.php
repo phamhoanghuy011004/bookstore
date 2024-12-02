@@ -123,8 +123,8 @@
                                 <i class="fal fa-envelope"></i>
                             </div>
                             <div class="offcanvas__contact-text">
-                                <a href="mailto:info@example.com"><span
-                                        class="mailto:info@example.com">info@example.com</span></a>
+                                <a href="mailto:bookstoreaptechexample.com"><span
+                                        class="mailto:bookstoreaptech@example.com">bookstoreaptech@example.com</span></a>
                             </div>
                         </li>
                         <li class="d-flex align-items-center">
@@ -168,11 +168,11 @@
             <ul class="contact-list">
                 <li>
                     <i class="fa-regular fa-phone"></i>
-                    <a href="tel:+20866660112">+208-6666-0112</a>
+                    <a href="tel:0986.999.888">0986.999.888</a>
                 </li>
                 <li>
                     <i class="far fa-envelope"></i>
-                    <a href="mailto:info@example.com">info@example.com</a>
+                    <a href="mailto:bookstoreaptech@example.com">bookstoreaptech@example.com</a>
                 </li>
                 <li>
                     <i class="far fa-clock"></i>

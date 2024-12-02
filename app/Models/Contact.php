@@ -5,8 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ShoppingCart extends Model
+class Contact extends Model
 {
     use HasFactory;
-    protected $fillable = ['id', 'total_price'];
+    protected $fillable = [
+        'name',
+        'email',
+        'message',
+    ];
 }

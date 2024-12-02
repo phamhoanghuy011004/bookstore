@@ -610,7 +610,7 @@
 <!-- Breadcumb Section Start -->
 <div class="breadcrumb-wrapper">
     <div class="book1">
-        <img src="assets/img/hero/book1.png" alt="book">
+        <img src="https://res.cloudinary.com/dficfkyug/image/upload/v1724836848/dfary5vjv5c7lcp3g9rf.png" alt="book">
     </div>
     <div class="book2">
         <img src="assets/img/hero/book2.png" alt="book">
@@ -644,7 +644,7 @@
             <div class="col-lg-9">
                 <div class="error-items">
                     <div class="error-image wow fadeInUp" data-wow-delay=".3s">
-                        <img src="assets/img/404.png" alt="img">
+                        <img src="https://res.cloudinary.com/dficfkyug/image/upload/v1725012297/y1bq9i4qknaa83ikir4e.png" alt="img">
                     </div>
                     <h2 class="wow fadeInUp" data-wow-delay=".5s">
                         <span>Oops!</span> Page not found

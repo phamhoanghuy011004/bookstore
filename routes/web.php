@@ -1,18 +1,17 @@
 <?php
 
+use App\Http\Controllers\Admin\ContactController;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\MainController;
+use App\Http\Controllers\Admin\MenuController;
 use App\Http\Controllers\Admin\ProductController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\Users\AuthorController;
 use App\Http\Controllers\Admin\Users\LoginController;
-use App\Http\Controllers\Admin\MenuController;
-
 use App\Http\Controllers\Client\AuthorInformationController;
 use App\Http\Controllers\Client\HomeController;
 use App\Http\Controllers\Client\ProductController1;
 use App\Http\Controllers\Client\ShopCartController;
-use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -60,6 +59,11 @@ Route::middleware(['auth'])->group(function () {
         Route::prefix('events')->group(function () {
             Route::get('add', [EventController::class, 'create']);
             Route::post('add', [EventController::class, 'store']);
+            Route::get('list', [EventController::class, 'indexlist'])->name('event.list');
+            Route::get('search', [EventController::class, 'search'])->name('event.search');
+            Route::get('edit/{product}', [EventController::class, 'edit'])->name('event.edit');
+            Route::post('edit/{product}', [EventController::class, 'update'])->name('event.update');
+            Route::get('destroy/{id}', [EventController::class, 'destroy'])->name('event.destroy');
         });
         Route::prefix('authors')->group(function () {
             Route::get('add', [AuthorController::class, 'create']);
@@ -69,7 +73,20 @@ Route::middleware(['auth'])->group(function () {
         Route::prefix('users')->group(function () {
             Route::get('add', [UserController::class, 'create']);
             Route::post('add', [UserController::class, 'store'])->name('users.store');
-            Route::get('list', [UserController::class, 'index']);
+            Route::get('list', [UserController::class, 'index'])->name('user.list');
+            Route::get('search', [UserController::class, 'search'])->name('user.search');
+            Route::get('edit/{product}', [UserController::class, 'edit'])->name('user.edit');
+            Route::post('edit/{product}', [UserController::class, 'update'])->name('user.update');
+            Route::get('destroy/{id}', [UserController::class, 'destroy'])->name('user.destroy');
+        });
+        Route::prefix('contacts')->group(function () {
+            Route::get('add', [ContactController::class, 'create']);
+            Route::post('add', [ContactController::class, 'store'])->name('contact.store');
+            Route::get('list', [ContactController::class, 'index'])->name('contact.list');
+            Route::get('search', [ContactController::class, 'search'])->name('contact.search');
+            Route::get('edit/{product}', [ContactController::class, 'edit'])->name('contact.edit');
+            Route::post('edit/{product}', [ContactController::class, 'update'])->name('contact.update');
+            Route::get('destroy/{id}', [ContactController::class, 'destroy'])->name('contact.destroy');
         });
     });
 
@@ -94,6 +111,7 @@ Route::get('/shop-cart/search', [ShopCartController::class, 'search'])->name('sh
 Route::view('/404', 'main.404');
 Route::view('/checkout', 'main.checkout');
 Route::view('/contact', 'main.contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 Route::view('/faq', 'main.faq');
 
 Route::view('/index', 'main.index');
@@ -117,6 +135,7 @@ Route::get('/shop-cart', [ShopCartController::class, 'show']);
 Route::post('/shop-cart/add', [ShopCartController::class, 'add'])->name('main.shop-cart');
 Route::post('/shop-cart/update', [ShopCartController::class, 'update'])->name('shop-cart.update');
 Route::get('/shop-cart/remove', [ShopCartController::class, 'remove']);
+Route::post('/shop-cart/save', [ShopCartController::class, 'save'])->name('shop-cart.save');
 
 
 //Route::view('/team', 'main.team'); // done
